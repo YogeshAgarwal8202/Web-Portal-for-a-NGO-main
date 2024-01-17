@@ -1,0 +1,376 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Suryabala Seva Sansthan</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.html">
+        <link rel="shortcut icon" type="image/x-icon" href="/users/assets/img/favicon.html">
+        <!-- Place favicon.ico in the root directory -->
+
+        <script src="/users/assets/js/cities.js"></script>
+
+        <!-- CSS here -->
+        <link rel="stylesheet" href="/users/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/users/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/users/assets/css/animate.css">
+        <link rel="stylesheet" href="/users/assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="/users/assets/css/all.min.css">
+        <link rel="stylesheet" href="/users/assets/css/flaticon.css">
+        <link rel="stylesheet" href="/users/assets/css/font.css">
+        <link rel="stylesheet" href="/users/assets/css/themify-icons.css">
+        <link rel="stylesheet" href="/users/assets/css/metisMenu.css">
+        <link rel="stylesheet" href="/users/assets/css/nice-select.css">
+        <link rel="stylesheet" href="/users/assets/css/slick.css">
+        <link rel="stylesheet" href="/users/assets/css/main.css">
+    </head>
+    <body>
+        <!-- header-area start -->
+        <%- include('header'); -%>
+        <!-- header-area end -->
+    
+        <!-- slide-bar start -->
+        <%- include('sidebar'); -%>
+        <!-- slide-bar end -->
+    
+        <main>
+<div class="donar-information donation-form white-bg mb-30 wow fadeInUp2 animated" data-wow-delay='.1s'>
+    <div class="section-title text-left mb-50">
+        <h6><span><i class="fas fa-cash-register"></i></span> Sign Up</h6>
+        <h2>Registeration Details</h2>
+    </div>
+    <form id="signup"  method="post">
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label>First Name:</label>
+                    <input type="text" id="firstname" name="user_first_name" class="form-control" placeholder="Enter First Name" required>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label>Last Name:</label>
+                    <input type="text" id="lastname" name="user_last_name" class="form-control" placeholder="Enter Last Name" required>
+                </div>
+            </div>
+            <!--<div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label>Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Enter Last Name" required>
+                </div>
+            </div>-->
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label>Date of Birth:</label>
+                    <input type="date" id="dob" name="user_dob" class="form-control" placeholder="Enter your Date of Birth" required>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label for="gender">Gender:</label>
+                    <!--<input type="text" id="gender" name="user_gender" class="form-control" placeholder="Enter gender" required>-->
+                    <input onkeypress="false;" list="gen" name="user_gender" id="gender" class="form-control" placeholder="Select an Option" required>
+                    <datalist id="gen">
+                        <option value="Male"> Male </option>
+                        <option value="Female"> Female </option>
+                        <option value="Other"> Other </option>
+                    </datalist>
+                </div>
+            </div>
+
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label>Phone Number:</label>
+                    <input type="text" id="phone" name="user_mobile" class="form-control" placeholder="Enter Phone Number" required>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label>Email:</label>
+                    <input type="email" id="email" name="user_email" class="form-control" placeholder=" Enter Email Address" required>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label>Password:</label>
+                    <input type="password" id="password" name="user_password" class="form-control" placeholder="Enter Password" required>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label>Confirm Password:</label>
+                    <input type="password" id="conformpassword" class="form-control" placeholder="Confirm Psassword" required>
+                </div>
+            </div>
+            <!--<div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label>Country:</label>
+                    <input type="text" id="country" name="country" class="form-control" placeholder="Enter Country" value="India" required>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <label for="statelist">State:</label>
+                <div class="input-area mb-10">
+                    
+                    <input type="text" id="state" name="state" class="form-control" placeholder="Enter State Name" required>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <label for="city_list">City:</label>
+                <div class="input-area mb-10">
+                   
+                    <input type="text" id="city" name="city" class="form-control" placeholder="Enter City Name" required> 
+                </div>
+            </div>-->
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label>Location:</label>
+                    <input onkeypress="false;" list="lct" name="user_location" id="location" class="form-control" placeholder="Select an Option" required>
+                    <datalist  id="lct">
+                        <% for(var i=0; i<location.length; i++) { %>
+                    
+                            <option data-value="<%= location[i].location_id %>">  <%= location[i].location_name %></option>
+                
+                            
+                        <% } %>  
+                    </datalist>
+        
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label>Country Code:</label>
+                    <input type="text" id="countrycode" name="user_country_code" class="form-control" placeholder="Enter Country Code" required>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label for="preferedcategory">Prefered Category:</label>
+                    <input onkeypress="false;" list="upc" name="user_prefered_category" id="prefered_category" class="form-control" placeholder="Select an Option" required>
+                    <datalist  id="upc">
+                        <% for(var i=0; i<category_info.length; i++) { %>
+                    
+                            <option data-value="<%= category_info[i].category_id %>">  <%= category_info[i].category_name %></option>
+                
+                            
+                        <% } %>  
+                    </datalist>
+                </div>
+            </div>
+            <!--<div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label for="security_que1">Security Question 1:</label>
+                    <input onkeypress="return false;" list="security_que0" name="security_que1" id="security_que1" class="form-control" placeholder="Select an Option" required>
+                        <datalist id="security_que0">
+                            <option value="What was your childhood nickname?">
+                            <option value="What is the name of your favorite childhood friend?">
+                            <option value="What school did you attend for sixth grade?">
+                            <option value="What was your childhood phone number including area code?">
+                        </datalist>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label>Security Answer 1:</label>
+                    <input type="text" id="security_ans1" name="security_ans1" class="form-control" placeholder="Enter Your Security Answer" required>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label for="security_que2">Security Question 2:</label>
+                    <input onkeypress="return false;" list="security_que" name="security_que2" id="security_que2" class="form-control" placeholder="Select an Option" required>
+                    <datalist id="security_que">
+                        <option value="What is your oldest cousin’s first and last name?">
+                        <option value="In what city or town did your mother and father meet?">
+                        <option value="In what city does your nearest sibling live?">
+                        <option value="In what city or town was your first job?">
+                    </datalist>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label>Security Answer 2:</label>
+                    <input type="text" id="security_ans2" name="security_ans2" class="form-control" placeholder="Enter Your Security Answer" required>
+                </div>
+            </div>-->
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label for="bloodgroup">Blood Group:</label>
+                    <!--<input type="text" id="bloodgroup" name="user_blood_group" class="form-control" placeholder="Enter blood group">-->
+                    <input onkeypress="false;" list="blood" name="user_blood_group" id="bloodgroup" class="form-control" placeholder="Select an Option" required>
+                    <datalist id="blood">
+                        <option value="A+"> A+ </option>
+                        <option value="A-"> A- </option>
+                        <option value="B+"> B+ </option>
+                        <option value="B-"> B- </option>
+                        <option value="O+"> O+ </option>
+                        <option value="O-"> O- </option>
+                        <option value="AB+"> AB+ </option>
+                        <option value="AB-"> AB- </option>
+                    </datalist>           
+                </div>
+            </div>
+            <!--<div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label>Last Known Blood Donation Date:</label>
+                    <input type="date" id="lt_bld_donation" name="user_last_date_donation" class="form-control" placeholder="Enter Your Last Blood Donation" required>
+                </div>
+            </div>-->
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label>Do you have any health issues?:</label>
+                    <textarea rows="5" cols="60" id="healthissue" name="user_health_issue" class="form-control1" placeholder="Enter Your Health Issues"></textarea>
+                </div>
+            </div>
+            
+            <div class="col-xl-12"> <br>
+                <button class="theme_btn theme_btn_bg" id="signupb" name="signupb" type="submit">Sign Up</button>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-xl-12" ><br>Already Signed Up? Login Here!<br>
+            <a href="/login"><button class="theme_btn theme_btn_bg" id="login" name="login">Log In</button></a>
+        </div>
+    </div>
+</div>
+
+<%- include('footer'); -%>
+<script src="/users/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="/users/assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="/users/assets/js/popper.min.js"></script>
+<script src="/users/assets/js/bootstrap.min.js"></script>
+<script src="/users/assets/js/owl.carousel.min.js"></script>
+<script src="/users/assets/js/isotope.pkgd.min.js"></script>
+<script src="/users/assets/js/slick.min.js"></script>
+<script src="/users/assets/js/jquery.meanmenu.min.js"></script>
+<script src="/users/assets/js/metisMenu.min.js"></script>
+<script src="/users/assets/js/jquery.nice-select.js"></script>
+<script src="/users/assets/js/ajax-form.js"></script>
+<script src="/users/assets/js/wow.min.js"></script>
+<script src="/users/assets/js/jquery.counterup.min.js"></script>
+<script src="/users/assets/js/waypoints.min.js"></script>
+<script src="/users/assets/js/jquery.scrollUp.min.js"></script>
+<script src="/users/assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="/users/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="/users/assets/js/jquery.easypiechart.js"></script>
+<script src="/users/assets/js/tilt.jquery.js"></script>
+<script src="/users/assets/js/parallax.min.js"></script>
+<script src="/users/assets/js/plugins.js"></script>
+<script src="/users/assets/js/main.js"></script>
+
+
+<!-- Jquery Validatio Code Start -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js"></script>
+<!--jQuery Validation-->
+<script>
+    jQuery.validator.addMethod("accept", function(value, element, param) {
+        return value.match(new RegExp("^" + param + "$"));
+    });
+
+    $.validator.addMethod("pwcheck", function(value) {
+           return /^[A-Za-z0-9\d=!\-@._*]*$/.test(value) // consists of only these
+           && /[a-z]/.test(value) // has a lowercase letter
+           && /[A-Z]/.test(value) // has a uppercase letter
+           && /\d/.test(value) // has a digit
+           && /\W/.test(value) // has a special character
+    });
+
+    $("#signup").validate({
+        rules: {
+            firstname: {
+                required: true,
+                accept: "[a-zA-Z]+"
+            },
+            lastname: {
+                required: true,
+                accept: "[a-zA-Z]+"
+            },
+            residence: {
+                required: true,
+                accept: "[a-zA-Z ]+"
+            },
+            phone: {
+                required: true,
+                digits: true
+            },
+            country: {
+                required: true,
+                accept: "[a-zA-Z]+"
+            },
+            state: {
+                required: true,
+                accept: "[a-zA-Z]+"
+            },
+            city: {
+                required: true,
+                accept: "[a-zA-Z]+"
+            },
+            password: {
+                required: true,
+                minlength: "8",
+                pwcheck: true
+                
+            },
+            conformpassword: {
+                required: true,
+                equalTo: "#password"
+            }
+        },
+        messages: {
+            firstname: {
+                required: "This field is required.",
+                accept: "This field must only consists letters."
+            },
+            lastname: {
+                required: "This field is required.",
+                accept: "This field must only consists letters."
+            },
+            residence: {
+                required: "This field is required.",
+                accept: "This field must only consists letters."
+            },
+            phone: {
+                required: "This field is required.",
+                digits: "This field must only consists numbers."
+            },
+            country: {
+                required: "This field is required.",
+                accept: "This field must only consists letters."
+            },
+            state: {
+                required: "This field is required.",
+                accept: "This field must only consists letters."
+            },
+            city: {
+                required: "This field is required.",
+                accept: "This field must only consists letters."
+            },
+            password: {
+                required: "This field is required.",
+                minlength: "This field must consist of minimun 8 digits.",
+                pwcheck: "This field must consist atleast one uppercase, one lowercase, one number and one special character."
+            },
+            conformpassword: {
+                required: "This field is required.",
+                equalTo: "Passwords does not match."
+            }
+        }
+        });
+</script>
+<style>
+    .error{
+        color:#d9534f;
+    }
+</style>
+<!-- Jquery Validatio Code End -->
+
+<script language="javascript">print_state("sts");</script>
+
+</body>
+</html>

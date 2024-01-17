@@ -1,0 +1,372 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+
+<!-- Mirrored from www.devsnews.com/template/enacare/enacare/events-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Jan 2022 05:33:38 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Suryabala Seva Sansthan</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.html">
+    <link rel="shortcut icon" type="image/x-icon" href= "/users/assets/img/favicon.html">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href= "/users/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href= "/users/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href= "/users/assets/css/animate.css">
+    <link rel="stylesheet" href= "/users/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href= "/users/assets/css/all.min.css">
+    <link rel="stylesheet" href= "/users/assets/css/flaticon.css">
+    <link rel="stylesheet" href= "/users/assets/css/font.css">
+    <link rel="stylesheet" href= "/users/assets/css/themify-icons.css">
+    <link rel="stylesheet" href= "/users/assets/css/metisMenu.css">
+    <link rel="stylesheet" href= "/users/assets/css/nice-select.css">
+    <link rel="stylesheet" href= "/users/assets/css/slick.css">
+    <link rel="stylesheet" href= "/users/assets/css/main.css">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- preloader end  -->
+    <!-- header-area start -->
+    <%- include('header'); -%>
+    <!-- header-area end -->
+
+    <!-- slide-bar start -->
+    <%- include('sidebar'); -%>
+    <!-- slide-bar end -->
+
+    <main>
+
+        <!--page-title-area start-->
+        <section class="page-title-area" style="background-image: url(/users/assets/img/bg/22.jpg)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 offset-xl-3">
+                        <div class="page-title-wrapper text-center pt-125">
+                            <div class="page-title-box">
+                                <h2 class="page-title">Event Details</h2>
+                                <ul class="breadcrumb-list">
+                                    <li><a href="/users/">Home <i class="far fa-chevron-right"></i></a></li>
+                                    <li><a href="/users/events">Events</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--page-title-area end-->
+        <!--cases-details-area start-->
+        <section class="events-details-area pt-125 pb-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-8 col-md-12">
+                        <div class="events-details-left">
+                            <div class="events-text-box mb-45">
+                                <h2 class="mb-30"> <%= event_info[0].event_title %></h2>
+                                <p class="mb-15">Particpate in the event and help us make a difference.</p>
+                            </div>
+                            <div class="row" style="height: 1100px;">
+                                <div class="col-xl-12 col-lg-12">
+                                    <div class="events-details-thumb mb-30">
+                                        <img src= "/users/assets/img/events/15.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="events-details-thumb mb-30">
+                                        <img src= "/users/assets/img/events/16-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="events-details-thumb mb-30">
+                                        <img src= "/users/assets/img/events/17.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="map-area">
+                            <!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29168.25352313116!2d90.37365128955076!3d23.959319500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1608807707111!5m2!1sen!2sbd"></iframe>-->
+                           <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.8929304754656!2d72.55776636444233!3d23.027703171916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f0915dbfab%3A0xdd7468b7070ee173!2sLaw%20Garden%2C%20Ellisbridge%2C%20Ahmedabad%2C%20Gujarat%20380006!5e0!3m2!1sen!2sin!4v1643959639509!5m2!1sen!2sin" style="height: 200px;"></iframe>-->
+                            <iframe src="" style="height: 400px; width: 1150px;" id="map"></iframe>
+                            </div>    
+                        </div>
+                        <%- include('event_dets_cnter'); -%>
+                    </div>
+                    
+                    <div class="col-xl-4 col-lg-4 col-md-12">
+                        <div class="events-details-right">
+                            <div class="widget grey-bg2 mb-30">
+                                <div class="widget-post">
+                                        <h3 class="cases-title mb-15">Events Information</h3>
+                                        <p class="mb-20"><%= event_info[0].event_details %></p>
+                                        <div class="times__content mb-20">
+                                            <h5>Event Date</h5>
+                                            <p><i class="far fa-calendar-alt"></i><%= moment(event_info[0].event_date).format('DD-MMM-YYYY'); %></p>
+                                        </div>
+                                        <div class="times__content mb-20">
+                                            <h5>Event Time</h5>
+                                            <p><i class="far fa-clock"></i> <%= event_info[0].event_time %></p>
+                                        </div>
+                                        <div class="times__content mb-20">
+                                            <h5>Event Location</h5>
+                                            <p><i class="far fa-map-marker-alt"></i> <%= event_info[0].event_location %></p>
+                                        </div>
+                                        <% if (volunteer_info.length > 0) { %>
+                                            <div class="times__content mb-20">
+                                                <h5>Volunteering Group Link</h5>
+                                                <p><i class="far fa-envelope-open"></i> <a href="<%= event_info[0].event_chat_group_link %>"> <%= event_info[0].event_chat_group_link %> </a></p>
+                                            </div>
+                                        <% } %>
+                                        <% var event_dt = new Date(moment(event_info[0].event_date).format('YYYY-MM-DD'));
+                                            if (event_dt > curdate) { %>
+                                        <div class="events__btn">
+                                            <form method="POST" action="/users/events_details_contributor/<%= event_info[0].event_id %>">
+                                            <% if (registration_info.length == 0 && volunteer_info.length == 0) { %>
+                                                <% if (event_info[0].category_id == 1) { %>
+                                                    <div class="times__content mb-20">
+                                                        <h5>Enter last known date of blood donation</h5>
+                                                        <p><input id="last_known_donation" name="last_known_donation" type="date" class="form-control required digit" value="<%= last_bld %>"></p>
+                                                    </div>
+                                                <% } %>
+                                                    <button type="submit" class="theme_btn theme_btn_bg" style="width: 200px;height:60px;" >join as contributor <span><i class="fas fa-handshake"></i></span></a> </button>
+                                                    <span><br><br></span>
+                                                </form>
+                                                <form method="POST" action="/users/events_details_volunteer/<%= event_info[0].event_id %>">
+                                                    <button class="theme_btn theme_btn_bg" style="width: 200px;height:60px;" type="submit">join as volunteer<span>
+                                                        <i class="fas fa-handshake"></i></button></a>
+                                                </form>
+                                            <% } %>
+                                        </div>
+                                        <% } %>
+                                </div>
+                            </div>
+                            <!--<div class="widget theme-bg mb-30">
+                                <div class="widget-post widget-organizer" style="background-image: url(assets/img/shape/13.png);">
+                                    <h3 class="cases-title mb-20">Event Collaborator</h3>
+                                    <div class="cases--author d-flex align-items-center mb-25">
+                                        <h3><i class="far fa-handshake"></i> Red Cross</h3>
+                                    </div>
+                                    <div class="times__content mb-20">
+                                        <h5>Collaboration</h5>
+                                        <p><i class="far fa-handshake"></i> Red Cross</p>
+                                    </div>
+                                    <div class="times__content mb-20">
+                                        <h5>Phone Number</h5>
+                                        <p><i class="far fa-phone"></i> +91-79-27557055/56</p>
+                                    </div>
+                                    <div class="times__content mb-20">
+                                        <h5>Email Address</h5>
+                                        <p><i class="fal fa-envelope-open"></i> <a href="mailto:info@redcrossgujarat.org">info@redcrossgujarat.org</a></p>
+                                         <p>   <i class="fal fa-envelope-open"></i> <a href="mailto:ircsguj@hotmail.com">ircsguj@hotmail.com</a> </p>
+                                    </div>
+                                    <div class="times__content mb-20">
+                                        <h5>Website</h5>
+                                        <p><i class="far fa-globe"></i> <a href="https://www.redcrossgujarat.org/">www.redcrossgujarat.org</a></p>
+                                    </div>
+                                </div>
+                                
+                            </div>-->
+                            <% var event_dt = new Date(moment(event_info[0].event_date).format('YYYY-MM-DD'));
+                                            if (event_dt < curdate) { %>
+                            <div class="col-xl-12 col-lg-12 col-md-10">
+                                <div class="donar-information donation-form grey-bg2 mb-30 pr-50 pl-50">
+                                    <div class="section-title text-left mb-50 wow fadeInUp2 animated" data-wow-delay='.1s'>
+                                        <!--<h6><span><i class="fas fa-send-backward"></i></span> Send Message</h6>-->
+                                        <h3>Feel Free To Give Feedback</h3>
+                                    </div>
+                                    <div class="main-contact-area">
+                                        <form method="post" action="/users/events_details_feedback/<%= event_info[0].event_id %>">
+                                                <div class="input-area mb-10">
+                                                    <textarea name="feedback_description" id="Feedback" maxlength="150" class="form-control1" placeholder="Your Feedback"></textarea>
+                                                </div><br>
+                                                <div class="input-btn">
+                                                    <button type="submit" class="theme_btn theme_btn_bg large_btn" >Send Feedback</button>
+                                                </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+                    <!--View feedback section-->
+                    <!--<section class="testimonial-area grey-bg2 pos-rel pt-120 pb-120">
+                            <h2 style="text-align: center; height: 150px;">Valuable Feedback</h2>
+                        <div class="container">
+                            <div class="row">
+                               <div class="col-xl-4">
+                                    <div class="testimonial-text-wrapper wow fadeInUp2 animated mb-30" data-wow-delay='.1s'> 
+                                        <div class="section-title text-left mb-35">
+                                            <h6><span><i class="fas fa-journal-whills"></i></span> Valuable Feedback</h6>
+                                        </div>
+                                       <p>We take honest feedbacks from our contributors to share their exprience and help us in making honest changes to benefit the people in need.</p>
+                                        <a class="theme_btn theme_btn_bg" href="#">View More  <span><i class="fas fa-journal-whills"></i></span></a>
+                                        </div>
+                                </div>
+                                <div class="col-xl-12 testimonial-wrapper">
+                                    <div class="row testimonial-active">
+                                        <div class="col-xl-6">
+                                            <div class="testimonial-item white-bg pos-rel wow fadeInUp2 animated" data-wow-delay='.3s'>
+                                                <div class="author_box d-flex align-items-center mb-25">
+                                                    <div class="author_box__img mr-15">
+                                                        <img src="/assets/img/testimonial/usr.png" style="width: 80px;" alt="">
+                                                    </div>
+                                                    <div class="author_box__content">
+                                                        <h4 class="semi-02-title">Nitin Shah</h4>
+                                                        <p>Business Man</p>
+                                                    </div>
+                                                </div>
+                                                <p class="semi-title mb-10">I have donated blood for more than 80 times now. However now that i have become 65 years old i can no longer make donation and this is when i started participating in this organization to encourage youth and to help them provide facilities in many events. </p>
+                                                <div class="review-icon">
+                                                    <span>Most Trusted</span>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="testimonial-item white-bg pos-rel wow fadeInUp2 animated" data-wow-delay='.5s'>
+                                                <div class="author_box d-flex align-items-center mb-25">
+                                                    <div class="author_box__img mr-15">
+                                                        <img src="/assets/img/testimonial/usr.png" style="width: 70px;" alt="">
+                                                    </div>
+                                                    <div class="author_box__content">
+                                                        <h4 class="semi-02-title"> Rakeshbhai Pahuja</h4>
+                                                        <p>Engineer</p>
+                                                    </div>
+                                                </div>
+                                                <p class="semi-title mb-10">I had thought of blood donation many times however i never donated before. Later on, i participated in the World Thallasemia Day celebration by Suryabala Seva Sansthan and Indian Red Cross Society where i made my first blood donation which helped a Thallasemia major. After sharing this news, me and my wife we both started participating more.</p>
+                                                <div class="review-icon">
+                                                    <span>Most Trusted</span>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="testimonial-item white-bg pos-rel wow fadeInUp2 animated" data-wow-delay='.3s'>
+                                                <div class="author_box d-flex align-items-center mb-25">
+                                                    <div class="author_box__img mr-15">
+                                                        <img src="/assets/img/testimonial/usr.png" style="width: 80px;" alt="">
+                                                    </div>
+                                                    <div class="author_box__content">
+                                                        <h4 class="semi-02-title">Rajeshbhai Shah</h4>
+                                                        <p>Business Man</p>
+                                                    </div>
+                                                </div>
+                                                <p class="semi-title mb-10">My belief is that the best investment is charity and so i decide to join this organization and was privileged enough to sponsor a girl's education. I am very grateful that i got this oppurtunity. </p>
+                                                <div class="review-icon">
+                                                    <span>Most Trusted</span>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="testimonial-item white-bg pos-rel wow fadeInUp2 animated" data-wow-delay='.5s'>
+                                                <div class="author_box d-flex align-items-center mb-25">
+                                                    <div class="author_box__img mr-15">
+                                                        <img src="/assets/img/testimonial/usr.png" style="width: 70px;" alt="">
+                                                    </div>
+                                                    <div class="author_box__content">
+                                                        <h4 class="semi-02-title"> Rakeshbhai Pahuja</h4>
+                                                        <p>Engineer</p>
+                                                    </div>
+                                                </div>
+                                                <p class="semi-title mb-10">I had thought of blood donation many times however i never donated before. Later on, i participated in the World Thallasemia Day celebration by Suryabala Seva Sansthan and Indian Red Cross Society where i made my first blood donation which helped a Thallasemia major. After sharing this news, me and my wife we both started participating more.</p>
+                                                <div class="review-icon">
+                                                    <span>Most Trusted</span>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>-->
+                </div>
+            </div>
+        </section>
+        <!--cases-details-area end-->
+    </main>
+    <!--footer-area start-->
+    <%- include('footer'); -%>
+    <!--footer-area end-->
+    <div id ="coordi" style="color: white;"> <%= event_info[0].event_coordinates %></div>
+
+
+
+    <!-- JS here -->
+    <script src= "/users/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src= "/users/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src= "/users/assets/js/popper.min.js"></script>
+    <script src= "/users/assets/js/bootstrap.min.js"></script>
+    <script src= "/users/assets/js/owl.carousel.min.js"></script>
+    <script src= "/users/assets/js/isotope.pkgd.min.js"></script>
+    <script src= "/users/assets/js/slick.min.js"></script>
+    <script src= "/users/assets/js/jquery.meanmenu.min.js"></script>
+    <script src= "/users/assets/js/metisMenu.min.js"></script>
+    <script src= "/users/assets/js/jquery.nice-select.js"></script>
+    <script src= "/users/assets/js/ajax-form.js"></script>
+    <script src= "/users/assets/js/wow.min.js"></script>
+    <script src= "/users/assets/js/jquery.counterup.min.js"></script>
+    <script src= "/users/assets/js/waypoints.min.js"></script>
+    <script src= "/users/assets/js/jquery.scrollUp.min.js"></script>
+    <script src= "/users/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src= "/users/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src= "/users/assets/js/jquery.easypiechart.js"></script>
+    <script src= "/users/assets/js/tilt.jquery.js"></script>
+    <script src= "/users/assets/js/parallax.min.js"></script>
+    <script src= "/users/assets/js/plugins.js"></script>
+    <script src= "/users/assets/js/main.js"></script>
+</body>
+
+<!--Maps fetch-->
+<script>
+    window.onload = function() {
+    var coordinates = $("#coordi").html();
+    var [lat, lng] = coordinates.split(',');
+    lat.trim();
+    lng.trim();
+    var loc= "https://maps.google.com/maps?q="+lat+","+lng+"&t=&z=15&ie=UTF8&iwloc=&output=embed";
+    document.getElementById('map').setAttribute('src', loc);
+    }
+</script>
+<style>
+    .error{
+        color:#d9534f;
+    }
+</style>
+
+<!-- Mirrored from www.devsnews.com/template/enacare/enacare/events-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Jan 2022 05:33:39 GMT -->
+</html>

@@ -1,0 +1,354 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+
+<!-- Mirrored from www.devsnews.com/template/enacare/enacare/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Jan 2022 05:32:04 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Suryabala Seva Sansthan</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.html">
+    <link rel="shortcut icon" type="image/x-icon" href="/users/assets/img/favicon.html">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/users/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/users/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/users/assets/css/animate.css">
+    <link rel="stylesheet" href="/users/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/users/assets/css/all.min.css">
+    <link rel="stylesheet" href="/users/assets/css/flaticon.css">
+    <link rel="stylesheet" href="/users/assets/css/font.css">
+    <link rel="stylesheet" href="/users/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="/users/assets/css/metisMenu.css">
+    <link rel="stylesheet" href="/users/assets/css/nice-select.css">
+    <link rel="stylesheet" href="/users/assets/css/slick.css">
+    <link rel="stylesheet" href="/users/assets/css/main.css">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- preloader end  -->
+    <!-- header-area start -->
+    <%- include('header'); -%>
+    <!-- header-area end -->
+
+    <!-- slide-bar start -->
+    <%- include('sidebar'); -%>
+    <!-- slide-bar end -->
+
+    <main>
+        <!--slider-area start-->
+        <div class="slider-area pos-rel">
+            <div class="slider-active">
+                <div class="single-slider slider-height pos-rel d-flex align-items-center"
+                    style="background-image: url(/users/assets/img/slider/slider1-1.jpg);">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="slider__content text-left">
+                                    <h5 class="sub-title mb-25 wow fadeInUp2 animated" data-wow-delay=".1s"><span class="pr-10"><i class="fas fa-hands-helping"></i></span>Helping Others Is The Way</h5>
+                                    <h3 class="main-title mb-5 wow fadeInUp2 animated" data-wow-delay=".1s"> We Help Ourselves</h3>
+                                        <ul class="btn-list wow fadeInUp2 animated" data-wow-delay=".3s">
+                                            <li><a class="theme_btn theme_btn_bg" href="/users/about">Learn more <span><i class="fas fa-gem"></i></span></a>
+                                            </li>
+                                            <li><a class="theme_btn theme_btn2 theme_btn_bg_02" href="/users/events">Our Events <span><i class="fas fa-clipboard-list"></i></span></a>
+                                            </li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-slider slider-height pos-rel d-flex align-items-center"
+                    style="background-image: url(/users/assets/img/slider/slider2-1.jpg);">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-7">
+                                <div class="slider__content text-left">
+                                    <h5 class="sub-title mb-25 wow fadeInUp2 animated" data-wow-delay=".1s"><span class="pr-10"><i class="fas fa-hands-helping"></i></span>Raising Your Helping Hands</h5>
+                                    <h3 class="main-title mb-35 wow fadeInUp2 animated" data-wow-delay=".2s">To Access Safe The Nation Mission</h3>
+                                        <ul class="btn-list wow fadeInUp2 animated" data-wow-delay=".3s">
+                                            <li><a class="theme_btn theme_btn_bg" href="/users/about">Learn more <span><i class="fas fa-gem"></i></span></a>
+                                            </li>
+                                            <li><a class="theme_btn theme_btn2 theme_btn_bg_02" href="/users/events">Our Events <span><i class="fas fa-clipboard-list"></i></span></a>
+                                            </li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--slider-area end-->
+        <!--services-area start-->
+        <section class="services-area grey-bg2 pb-30">
+            <div class="container custom-container-02">
+                <div class="services-bg white-bg pos-rel pt-30 pr-30 pl-30">
+                    <div class="row">
+                        <% for(var i=0; i<category_info.length; i++) { %>
+                       <!--<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp2 animated" data-wow-delay='.3s'>
+                            <div class="services pos-rel mb-30">
+                                <div class="services__img">
+                                    <img src="/assets/img/services/01-1.jpeg" alt="">
+                                </div>
+                                <ul class="services__content heding-bg pos-abl">
+                                    <li>
+                                        <h5 class="semi-03-title"><a href="/events">Education of underprivileged.
+                                        </a></h5>
+                                        <p class="p1">Providing finance to stationary</p>
+                                    </li>
+                                    <li><a class="more_btn" href="/events"><i class="far fa-arrow-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp2 animated" data-wow-delay='.5s'>
+                            <div class="services pos-rel mb-30">
+                                <div class="services__img">
+                                    <img src="/assets/img/services/02-1.jpg" alt="">
+                                </div>
+                                <ul class="services__content heding-bg pos-abl">
+                                    <li>
+                                        <h3 class="semi-03-title"><a href="/events">Public Healthcare.
+                                        </a></h3>
+                                        <p class="p1">Giving treatments to awareness</p>
+                                    </li>
+                                    <li><a class="more_btn" href="/events"><i class="far fa-arrow-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp2 animated" data-wow-delay='.7s'>
+                            <div class="services pos-rel mb-30">
+                                <div class="services__img">
+                                    <img src="/assets/img/services/03-1.jpg" alt="">
+                                </div>
+                                <ul class="services__content heding-bg pos-abl">
+                                    <li>
+                                        <h3 class="semi-03-title"><a href="/events">Environment protection.
+                                        </a></h3>
+                                        <p class="p1">From seminars to plantation</p>
+                                    </li>
+                                    <li><a class="more_btn" href="/events"><i class="far fa-arrow-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>-->
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp2 animated" data-wow-delay='.5s'>
+                            <div class="services pos-rel mb-30">
+                                <div class="services__img">
+                                    <img src='/upload/category/<%= category_info[i].category_image %>' style="width:200px;" alt="">
+                                </div>
+                                <ul class="services__content heding-bg pos-abl">
+                                    <li>
+                                        <h3 class="semi-03-title" style="margin-left: -40px;font-size:larger;"><a href="/users/events"> <%= category_info[i].category_name %> </a></h3>
+                                        <!--<p class="p1">Providing necessities</p>-->
+                                    </li>
+                                    <li><a class="more_btn" href="/users/eventsfilter/<%= category_info[i].category_id%>"><i class="far fa-arrow-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--services-area end-->
+        <!--about-us-area start-->
+        <section class="about-area grey-bg2 pos-rel pb-100">
+            <div class="right-shape">
+                <img src="/users/assets/img/shape/01.png" alt="">
+            </div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="about-img mb-60 pos-rel">
+                            <div class="about-img__thumb pr-45 wow fadeInUp2 animated" data-wow-delay='.1s'>
+                                <img src="/users/assets/img/about/01-1.jpg" alt="">
+                            </div>
+                            <div class="experience-box heding-bg wow fadeInUp2 animated"
+                            data-wow-delay='.3s'>
+                                <h1><%= experience %></h1>
+                                <h5 class="semi-02-title">Years 
+                                    Experience</h>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="about-wrapper mb-30">
+                            <div class="section-title text-left mb-20 wow fadeInUp2 animated" data-wow-delay='.1s'>
+                                <h6><span><i class="fas fa-arrow-alt-circle-right"></i></span> About Suryabala Seva Sansthan</h6>
+                                <h3>Don’t just be Human Being, Be Human Doing</h3>
+                            </div>
+                            <p>Our Organization, Suryabala Seva Sansthan in a non profitable charity where </p>
+                            <ul class="about_list mt-30 mb-20 wow fadeInUp2 animated" data-wow-delay='.2s'>
+                                <li>We sponsors education of underprivileged children from poor families</li>
+                                <li>Promoting blood donation and spreading awareness of eye donation </li>
+                                <li>Encouraging citizens to contribute in environment protection through creating a green belt within the cities.</li>
+                             </ul>
+                            <a class="theme_btn theme_btn_bg" href="/users/about">Learn more <span><i class="fas fa-gem"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--about-us-area end-->
+        <!--counter-area start-->
+        <%- include('counter'); -%>
+        <!--counter-area end-->
+        <!--gallery-area start-->
+        <section class="gallery-area pt-130 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 offset-xl-2">
+                        <div class="section-title text-center mb-85 pl-50 pr-50 wow fadeInUp2 animated" data-wow-delay='.1s'>
+                            <h6><span><i class="fas fa-photo-video"></i></span> Photo Gallery</h6>
+                                <h2 >Photo Gallery</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="gallery pos-rel text-center wow fadeInUp2 animated" data-wow-delay='.3s'>
+                                    <div class="gallery__thumb pos-rel mb-30">
+                                        <img src="/users/assets/img/gallery/01-11.jpg" alt="">
+                                    </div>
+                                    <div class="gallery__content">
+                                        <a class="popup-image" href="/users/assets/img/gallery/01-1.jpg"><i class="far fa-plus"></i></a>
+                                        <h3><a href="gallery-2.html">Plantation</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="gallery pos-rel text-center wow fadeInUp2 animated" data-wow-delay='.3s'>
+                                    <div class="gallery__thumb pos-rel mb-30">
+                                        <img src="/users/assets/img/gallery/02-11.jpg" alt="">
+                                    </div>
+                                    <div class="gallery__content">
+                                        <a class="popup-image" href="/users/assets/img/gallery/02-1.jpg"><i class="far fa-plus"></i></a>
+                                        <h3><a href="gallery-2.html">Blood Donation</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="gallery pos-rel text-center wow fadeInUp2 animated" data-wow-delay='.3s'>
+                                    <div class="gallery__thumb pos-rel mb-30">
+                                        <img src="/users/assets/img/gallery/03-11.jpg" alt="">
+                                    </div>
+                                    <div class="gallery__content">
+                                        <a class="popup-image" href="/users/assets/img/gallery/03-1.jpg"><i class="far fa-plus"></i></a>
+                                        <h3><a href="gallery-2.html">Educational Donation</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="gallery pos-rel text-center wow fadeInUp2 animated" data-wow-delay='.3s'>
+                                    <div class="gallery__thumb pos-rel mb-30">
+                                        <img src="/users/assets/img/gallery/04-11.jpg" alt="">
+                                    </div>
+                                    <div class="gallery__content">
+                                        <a class="popup-image" href="/users/assets/img/gallery/04-1.jpg"><i class="far fa-plus"></i></a>
+                                        <h3><a href="gallery-2.html">Cloth Donation</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="gallery pos-rel text-center wow fadeInUp2 animated" data-wow-delay='.3s'>
+                            <div class="gallery__thumb pos-rel mb-30">
+                                <img src="/users/assets/img/gallery/05-11.jpg" alt="">
+                            </div>
+                            <div class="gallery__content">
+                                <a class="popup-image" href="/users/assets/img/gallery/05-1.jpg"><i class="far fa-plus"></i></a>
+                                <h3><a href="gallery-2.html">Quality Education</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--gallery-area end-->
+        <!--testimonial-area start-->
+        <section class="testimonial-area grey-bg2 pos-rel pt-130 pb-130">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4">
+                        <div class="testimonial-text-wrapper wow fadeInUp2 animated mb-30" data-wow-delay='.1s'>
+                            <div class="section-title text-left mb-35">
+                                <h6><span><i class="fas fa-journal-whills"></i></span> Valuable Feedback</h6>
+                                <h2>What Our Contributors
+                                    Say About Us</h2>
+                            </div>
+                            <p>We take honest feedbacks from our contributors to share their exprience and help us in making honest changes to benefit the people in need.</p>    
+                        </div>
+                    </div>
+                    <div class="col-xl-8 testimonial-wrapper">
+                        <div class="row testimonial-active">
+                            <% for(var i=0; i<6; i++) { %>
+                            <div class="col-xl-6">
+                                <div class="testimonial-item white-bg pos-rel wow fadeInUp2 animated" data-wow-delay='.3s'>
+                                    <div class="author_box d-flex align-items-center mb-25">
+                                        <div class="author_box__img mr-15">
+                                            <img src="/users/assets/img/testimonial/usr.png" style="width: 80px;" alt="">
+                                        </div>
+                                        <div class="author_box__content">
+                                            <h4 class="semi-02-title"><%= feedback_info[i].user_name %></h4>
+                                        </div>
+                                    </div>
+                                    <p class="semi-title mb-10"> <%= feedback_info[i].feedback_description %> </p>
+                                </div>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--testimonial-area end-->
+    </main>
+    <!--footer-area start-->
+    <%- include('footer'); -%>
+    <!--footer-area end-->
+    <!-- JS here -->
+    <script src="/users/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="/users/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/users/assets/js/popper.min.js"></script>
+    <script src="/users/assets/js/bootstrap.min.js"></script>
+    <script src="/users/assets/js/owl.carousel.min.js"></script>
+    <script src="/users/assets/js/isotope.pkgd.min.js"></script>
+    <script src="/users/assets/js/slick.min.js"></script>
+    <script src="/users/assets/js/jquery.meanmenu.min.js"></script>
+    <script src="/users/assets/js/metisMenu.min.js"></script>
+    <script src="/users/assets/js/jquery.nice-select.js"></script>
+    <script src="/users/assets/js/ajax-form.js"></script>
+    <script src="/users/assets/js/wow.min.js"></script>
+    <script src="/users/assets/js/jquery.counterup.min.js"></script>
+    <script src="/users/assets/js/waypoints.min.js"></script>
+    <script src="/users/assets/js/jquery.scrollUp.min.js"></script>
+    <script src="/users/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/users/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/users/assets/js/jquery.easypiechart.js"></script>
+    <script src="/users/assets/js/tilt.jquery.js"></script>
+    <script src="/users/assets/js/parallax.min.js"></script>
+    <script src="/users/assets/js/plugins.js"></script>
+    <script src="/users/assets/js/main.js"></script>
+</body>
+
+<!-- Mirrored from www.devsnews.com/template/enacare/enacare/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Jan 2022 05:32:33 GMT -->
+</html>

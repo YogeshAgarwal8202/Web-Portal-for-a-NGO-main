@@ -1,0 +1,328 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+
+<!-- Mirrored from www.devsnews.com/template/enacare/enacare/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Jan 2022 05:33:16 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Suryabala Seva Sansthan</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.html">
+    <link rel="shortcut icon" type="image/x-icon" href="/users/assets/img/favicon.html">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/users/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/users/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/users/assets/css/animate.css">
+    <link rel="stylesheet" href="/users/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/users/assets/css/all.min.css">
+    <link rel="stylesheet" href="/users/assets/css/flaticon.css">
+    <link rel="stylesheet" href="/users/assets/css/font.css">
+    <link rel="stylesheet" href="/users/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="/users/assets/css/metisMenu.css">
+    <link rel="stylesheet" href="/users/assets/css/nice-select.css">
+    <link rel="stylesheet" href="/users/assets/css/slick.css">
+    <link rel="stylesheet" href="/users/assets/css/main.css">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- preloader end  -->
+    <!-- header-area start -->
+    <%- include('header'); -%>
+    <!-- header-area end -->
+
+    <!-- slide-bar start -->
+    <%- include('sidebar'); -%>
+    <!-- slide-bar end -->
+
+    <main>
+        <!--page-title-area start-->
+        <section class="page-title-area" style="background-image: url(/users/assets/img/bg/24.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 offset-xl-4">
+                        <div class="page-title-wrapper text-center pt-125">
+                            <div class="page-title-box">
+                                <h2 class="page-title">Edit Profile</h2>
+                                <ul class="breadcrumb-list">
+                                    <li><a href="/users/profile_details">My Profile <i class="far fa-chevron-right"></i></a></li>
+                                    <li><a href="/users/edit_profile">Edit Profile</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--page-title-area end-->
+        <!--about-us-area start-->
+        <section class="about-area pt-50 pb-15">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-12">
+                        <div class="about-img-03 pos-rel">
+                            <div class="about-img-03__thumb-02 ml-100 wow fadeInUp2 animated" data-wow-delay='.1s'>
+                                <img style="margin-top: 100px;" height="200px" width="200px" class="user_img" src="/upload/users/<%= db_rows_array[0].user_image %>" alt="avatar">
+                            </div>
+                        </div>
+                    <div style="margin-left: 100px; margin-top: 30px;">
+                        
+                    </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="about-wrap-04 mb-60 pl-40">
+                            <h6 class="h61 pos-abs"><span><i class="fas fa-pen"></i></span> &nbsp; Edit Profile</h6>
+
+                            <div class="section-title text-left mb-20 wow fadeInUp2 animated" data-wow-delay='.1s'>
+                                <ul class="f-left pos-rel">
+                            <form method="post" id="edit_profile" enctype="multipart/form-data" >
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="input-area mb-10">
+                                            <label>Full Name: </label>
+                                            <input type="text" id="firstname" name="user_name" class="form-control" value="<%= db_rows_array[0].user_name %>">
+                                        </div>
+                                    </div>
+                                    <!--<div class="col-xl-6">
+                                        <div class="input-area mb-10">
+                                            <label>Last Name: </label>
+                                            <input type="text" id="lastname" name="lastname" class="form-control" value="Chokshi">
+                                        </div>
+                                    </div>-->
+                                    <div class="col-xl-6">
+                                        <div class="input-area mb-10">
+                                            <label>Change Profile Pic:</label>
+                                            <input type="file" id="user_image" name="user_image">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-6">
+                                        <div class="input-area mb-10">
+                                            <label>Date of Birth:</label>
+                                            <input type="date" id="dob" name="user_dob" class="form-control" value="<%= db_rows_array[0].user_dob %>" placeholder="Select Date Of Birth">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="input-area mb-10">
+                                            <label for="gender">Gender:</label>
+                                            <input onkeypress="false;" list="gen" name="user_gender" id="gender" class="form-control" value="<%= db_rows_array[0].user_gender %>" placeholder="Select an Option">
+                                            <datalist id="gen">
+                                                <option value="Male">
+                                                <option value="Female">
+                                                <option value="Other">
+                                            </datalist>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="col-xl-6">
+                                        <div class="input-area mb-10">
+                                            <label>Phone Number:</label>
+                                            <input type="text" id="phone" name="user_mobile" class="form-control" value="<%= db_rows_array[0].user_mobile %>">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="input-area mb-10">
+                                            <label>Email:</label>
+                                            <input type="email" id="email" name="user_email" class="form-control" value="<%= db_rows_array[0].user_email %>">
+                                        </div>
+                                    </div>
+                                    <!--<div class="col-xl-6">
+                                        <div class="input-area mb-10">
+                                            <label>Country:</label>
+                                            <input type="text" id="country" name="country" class="form-control" value="India">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <label for="statelist">State:</label>
+                                        <div class="input-area mb-10">
+                                            <select onchange="print_city('state', this.selectedIndex);" id="sts" name="stt" class="form-control"></select>
+                                            <input type="text" id="state" name="state" class="form-control" value="Gujarat" required>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <label for="city_list">City:</label>
+                                        <div class="input-area mb-10">
+                                            <select id ="state" name="citylist" class="form-control"></select>
+                                            <input type="text" id="city" name="city" class="form-control" Value="Ahmedabad" required> 
+
+                                        </div>
+                                    </div>-->
+                                    <div class="col-xl-6">
+                                        <div class="input-area mb-10">
+                                            <label>Area of Residence:</label>
+                                            <input onkeypress="false;" list="loc" name="user_location" class="form-control" value="<%= db_rows_array[0].user_location %>" placeholder="Select an Option" required>
+										<datalist  id="loc">
+											<% for(var i=0; i<location.length; i++) { %>
+										
+												<option data-value="<%= location[i].location_id %>">  <%= location[i].location_name %></option>
+									
+												
+											<% } %>  
+										</datalist>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="input-area mb-10">
+                                            <label>Country Code:</label>
+                                            <input type="number" id="countrycode" name="user_country_code" class="form-control" Value="<%= db_rows_array[0].user_country_code %>">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="input-area mb-10">
+                                            <label for="preferedcategory"><b>Prefered Category:</b></label>
+                                            <% for(var i=0; i<category.length; i++) { %>
+                                                <div class="radio block"><label><input type="radio" name="user_prefered_category" id="category1" value="<%= category[i].category_id %>" required> <%= category[i].category_name %></label></div>
+                                                <% } %> 
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="input-area mb-10">
+                                            <label for="bloodgroup">Blood Group:</label>
+                                            <input onkeypress="false;" list="blood" name="user_blood_group" id="bloodgroup" class="form-control" value="<%= db_rows_array[0].user_blood_group %>"  placeholder="Select an Option">
+                                            <datalist id="blood">
+                                                <option value="A+">
+                                                <option value="A-">
+                                                <option value="B+">
+                                                <option value="B-">
+                                                <option value="O+">
+                                                <option value="O-">
+                                                <option value="AB+">
+                                                <option value="AB-">
+                                            </datalist>            
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="input-area mb-10">
+                                            <label>Last Known Blood Donation Date:</label>
+                                            <input type="date" id="lt_bld_donation" name="user_last_date_donation" class="form-control" Value="<%= db_rows_array[0].user_late_date_donation %>" placeholder="Select Last Date Of Donation">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="input-area mb-10">
+                                            <label>Do you have any health issues?:</label>
+                                            <textarea rows="5" cols="60" id="healthissue" name="user_health_issue" class="form-control1" Value=""><%= db_rows_array[0].user_health_issue %></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12"> <br>
+                                        <button class="theme_btn theme_btn_bg" id="edit_confirm_b" name="edit_confirm_b" type="submit">Confirm</button>
+                                    </div>
+                                </div>
+                            </form>
+    </main>
+    <!--footer-area start-->
+    <%- include('footer'); -%>
+    <!--footer-area end-->
+
+
+
+    <!-- JS here -->
+    <script src="/users/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="/users/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/users/assets/js/popper.min.js"></script>
+    <script src="/users/assets/js/bootstrap.min.js"></script>
+    <script src="/users/assets/js/owl.carousel.min.js"></script>
+    <script src="/users/assets/js/isotope.pkgd.min.js"></script>
+    <script src="/users/assets/js/slick.min.js"></script>
+    <script src="/users/assets/js/jquery.meanmenu.min.js"></script>
+    <script src="/users/assets/js/metisMenu.min.js"></script>
+    <script src="/users/assets/js/jquery.nice-select.js"></script>
+    <script src="/users/assets/js/ajax-form.js"></script>
+    <script src="/users/assets/js/wow.min.js"></script>
+    <script src="/users/assets/js/jquery.counterup.min.js"></script>
+    <script src="/users/assets/js/waypoints.min.js"></script>
+    <script src="/users/assets/js/jquery.scrollUp.min.js"></script>
+    <script src="/users/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/users/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/users/assets/js/jquery.easypiechart.js"></script>
+    <script src="/users/assets/js/tilt.jquery.js"></script>
+    <script src="/users/assets/js/parallax.min.js"></script>
+    <script src="/users/assets/js/plugins.js"></script>
+    <script src="/users/assets/js/main.js"></script>
+    
+    <!--jQuery Validation-->
+    <!-- Jquery Validatio Code Start -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js"></script>
+<script>
+    jQuery.validator.addMethod("accept", function(value, element, param) {
+        return value.match(new RegExp("^" + param + "$"));
+    });
+
+    $.validator.addMethod("pwcheck", function(value) {
+           return /^[A-Za-z0-9\d=!\-@._*]*$/.test(value) // consists of only these
+           && /[a-z]/.test(value) // has a lowercase letter
+           && /[A-Z]/.test(value) // has a uppercase letter
+           && /\d/.test(value) // has a digit
+           && /\W/.test(value) // has a special character
+    });
+    
+    $("#edit_profile").validate({
+        rules: {
+            firstname: {
+                accept: "[a-zA-Z]+"
+            },
+            lastname: {
+                accept: "[a-zA-Z]+"
+            },
+            residence: {
+                accept: "[a-zA-Z]+"
+            },
+            phone: {
+                digits: true
+            },
+            profile_pic: {
+                accept: "image/*",
+                maxsize: 1000
+            }
+            
+        },
+        messages: {
+            firstname: {
+                accept: "This field must only consists letters."
+            },
+            lastname: {
+                accept: "This field must only consists letters."
+            },
+            Residence: {
+                accept: "This field must only consists letters."
+            },
+            phone: {
+                digits: "This field must only consists numbers."
+            },
+            profile_pic:{
+                        maxsize: "The file must be less than 100kb",
+                        accept: "This field must only consists images."
+                    }
+            }
+        });
+</script>
+
+<style>
+    .error{
+        color:#d9534f;
+    }
+</style>
+<!-- Jquery Validatio Code End -->
+</body>
+
+
+<!-- Mirrored from www.devsnews.com/template/enacare/enacare/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Jan 2022 05:33:17 GMT -->
+</html>

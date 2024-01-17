@@ -1,0 +1,278 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+
+<!-- Mirrored from www.devsnews.com/template/enacare/enacare/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Jan 2022 05:33:16 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Suryabala Seva Sansthan</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.html">
+    <link rel="shortcut icon" type="image/x-icon" href="/users/assets/img/favicon.html">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/users/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/users/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/users/assets/css/animate.css">
+    <link rel="stylesheet" href="/users/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/users/assets/css/all.min.css">
+    <link rel="stylesheet" href="/users/assets/css/flaticon.css">
+    <link rel="stylesheet" href="/users/assets/css/font.css">
+    <link rel="stylesheet" href="/users/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="/users/assets/css/metisMenu.css">
+    <link rel="stylesheet" href="/users/assets/css/nice-select.css">
+    <link rel="stylesheet" href="/users/assets/css/slick.css">
+    <link rel="stylesheet" href="/users/assets/css/main.css">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- preloader end  -->
+    <!-- header-area start -->
+    <%- include('header'); -%>
+    <!-- header-area end -->
+
+    <!-- slide-bar start -->
+    <%- include('sidebar'); -%>
+    <!-- slide-bar end -->
+
+    <main>
+        <!--page-title-area start-->
+        <section class="page-title-area" style="background-image: url(/users/assets/img/bg/23.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 offset-xl-4">
+                        <div class="page-title-wrapper text-center pt-125">
+                            <div class="page-title-box">
+                                <h2 class="page-title">My Profile</h2>
+                                <ul class="breadcrumb-list">
+                                    <li><a href="/users/">My Account<i class="far fa-chevron-right"></i></a></li>
+                                    <li><a href="/users/profile_details">My Profile</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--page-title-area end-->
+        <!--about-us-area start-->
+        <section class="about-area pt-50 pb-70">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="about-img-03 pos-rel">
+                            <div class="about-img-03__thumb-02 ml-100 wow fadeInUp2 animated" data-wow-delay='.1s'>
+                                <img class="user_img" height="400px" width="400px" src="/upload/users/<%= profile[0].user_image %>" alt="avatar">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="about-wrap-04 mb-60 pl-40">
+                          <!--<h6 class="h61 pos-abs"><span><i class="fas fa-heart"></i></span>My Profile</h6><br> -->  
+                            <div class="section-title text-left mb-20 wow fadeInUp2 animated" data-wow-delay='.1s'>
+                                <ul class="f-left pos-rel">
+                            <li>  
+                                <h4>Name:</h4>
+                                <p class="mb-35"><%= profile[0].user_name %></p>
+                            </li> 
+                            <li>
+                                <h4>Date Of Birth:</h4>
+                                <p class="mb-35"><%= moment(profile[0].user_dob).format('DD-MMM-YYYY'); %></p>
+                            </li>
+                            <li>
+                                <h4>Gender:</h4>
+                                <p class="mb-35"><%= profile[0].user_gender %></p>
+                            </li>
+                            <li>  
+                                <h4>Blood Group:</h4>
+                                <p class="mb-35"><%= profile[0].user_blood_group %></p>
+                            </li> 
+                            <li>
+                                <h4>Health Issue:</h4>
+                                <p class="mb-35"><%= profile[0].user_health_issue %></p>
+                            </li> 
+                            <!--<li>
+                                <a class="button2" href="Edit_user">Edit Details</a>
+                            </li>-->
+                                </ul>
+                                <ul class="f-right1 pos-rel">
+                                    <li>
+                                        <h4>Residence Area</h4>
+                                        <p class="mb-35"><%= profile[0].user_location %></p>
+                                    </li>
+                                    <li>
+                                        <h4>Email:</h4>
+                                        <p class="mb-35"><%= profile[0].user_email %></p>
+                                    </li> 
+                                    <li>
+                                        <h4>Phone:</h4>
+                                        <p class="mb-35"><%= profile[0].user_mobile %></p>
+                                    </li> 
+                                    <li>
+                                        <h4>Last Date of Blood Donation:</h4>
+                                        <p class="mb-35"><%= moment(profile[0].user_last_date_donation).format('DD-MMM-YYYY'); %></p>
+                                    </li> 
+                                    
+                                    <li>
+                                        <h4>Prefered Category:</h4>
+                                        <p class="mb-35"><%= profile[0].category_name %></p>
+                                    </li> 
+                                    
+                                    <li>
+                                        <div>
+                                            <a class="theme_btn theme_btn_bg" href="/users/edit_profile/<%= profile[0].user_id %>" id="edit_profile_b" name="edit_profile_b">Edit Profile </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                            
+                            <!--<ul class="nav nav-tabs mb-35" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                        aria-controls="home" aria-selected="true">Eduacation</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                        aria-controls="profile" aria-selected="false">Environment</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                        aria-controls="contact" aria-selected="false">HealthCare</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                    aria-labelledby="home-tab">
+                                    <div class="inner-content d-sm-flex align-items-center mr-35">
+                                        <div class="inner-content__img mr-20">
+                                            <img src="/assets/img/about/05-11.jpg" alt="">
+                                        </div>
+                                        <div class="inner-content__text">
+                                            <h3>Education For Child</h3>
+                                            <p>Our Organization gives financial support, educational seminars to create awareness and to give guidance; We also provide educational materials. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="inner-content d-sm-flex align-items-center">
+                                        <div class="inner-content__img mr-20">
+                                            <img src="/assets/img/about/09-11.jpg" alt="">
+                                        </div>
+                                        <div class="inner-content__text">
+                                            <h3>Save Environment</h3>
+                                            <p>Our organization holds events for plantation in different areas and also holds seminars to bring more awareness  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                    <div class="inner-content d-sm-flex align-items-center">
+                                        <div class="inner-content__img mr-20">
+                                            <img src="/assets/img/about/10-11.jpg" alt="">
+                                        </div>
+                                        <div class="inner-content__text">
+                                            <h3>HealthCare</h3>
+                                            <p>Our Organization holds events for healt check up, bood donation, etc as well as seminars to bring health awareness </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--about-us-area end-->
+        <!--counter-area start-->
+        
+        <!--counter-area end-->
+        <!--what-we-area start-->
+       <!--<section class="what-we-area grey-bg2 pos-rel pt-125 pb-95">
+            <div class="right-help" style="background-image: url(assets/img/about/06-1.jpg);">    
+            </div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="about-wrapper we-wrapper mb-30">
+                            <div class="section-title text-left mb-20 wow fadeInUp2 animated" data-wow-delay='.1s'>
+                                <h6><span><i class="fas fa-heart"></i></span> What We Do</h6>
+                                <h2>We Rise By Lifting Others</h2>
+                            </div>
+                            <p class="wow fadeInUp2 animated" data-wow-delay='.2s'>We are open to all Indians irrespective of caste, religion, language or region.</p>
+                            <ul class="about_list mt-30 mb-25 wow fadeInUp2 animated" data-wow-delay='.3s'>
+                                <li>We believe in equality for all </li>
+                                <li>We do not carry on any activities with an intention of earning profit.s</li>
+                                <li>Together we can make change in the world and save lives.  </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!--what-we-area end-->
+        <!--team-area start-->
+        
+        <!--team-area end-->
+         <!--donation-area start-->
+        
+        <!--donation-area end-->
+        <!--testimonial-area start-->
+        
+        <!--testimonial-area end-->
+        <!--blog-area start-->
+        
+        <!--blog-area end-->
+        <!--brand-area start-->
+        
+        <!--brand-area end-->
+    </main>
+    <!--footer-area start-->
+    <%- include('footer'); -%>
+    <!--footer-area end-->
+
+
+
+    <!-- JS here -->
+    <script src="/users/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="/users/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/users/assets/js/popper.min.js"></script>
+    <script src="/users/assets/js/bootstrap.min.js"></script>
+    <script src="/users/assets/js/owl.carousel.min.js"></script>
+    <script src="/users/assets/js/isotope.pkgd.min.js"></script>
+    <script src="/users/assets/js/slick.min.js"></script>
+    <script src="/users/assets/js/jquery.meanmenu.min.js"></script>
+    <script src="/users/assets/js/metisMenu.min.js"></script>
+    <script src="/users/assets/js/jquery.nice-select.js"></script>
+    <script src="/users/assets/js/ajax-form.js"></script>
+    <script src="/users/assets/js/wow.min.js"></script>
+    <script src="/users/assets/js/jquery.counterup.min.js"></script>
+    <script src="/users/assets/js/waypoints.min.js"></script>
+    <script src="/users/assets/js/jquery.scrollUp.min.js"></script>
+    <script src="/users/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/users/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/users/assets/js/jquery.easypiechart.js"></script>
+    <script src="/users/assets/js/tilt.jquery.js"></script>
+    <script src="/users/assets/js/parallax.min.js"></script>
+    <script src="/users/assets/js/plugins.js"></script>
+    <script src="/users/assets/js/main.js"></script>
+</body>
+
+
+<!-- Mirrored from www.devsnews.com/template/enacare/enacare/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Jan 2022 05:33:17 GMT -->
+</html>

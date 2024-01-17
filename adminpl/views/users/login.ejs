@@ -1,0 +1,138 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Suryabala Seva Sansthan</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="manifest" href="site.html">
+        <link rel="shortcut icon" type="image/x-icon" href="/users/assets/img/favicon.html">
+        <!-- Place favicon.ico in the root directory -->
+        
+        <!-- CSS here -->
+        <link rel="stylesheet" href="/users/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/users/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/users/assets/css/animate.css">
+        <link rel="stylesheet" href="/users/assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="/users/assets/css/all.min.css">
+        <link rel="stylesheet" href="/users/assets/css/flaticon.css">
+        <link rel="stylesheet" href="/users/assets/css/font.css">
+        <link rel="stylesheet" href="/users/assets/css/themify-icons.css">
+        <link rel="stylesheet" href="/users/assets/css/metisMenu.css">
+        <link rel="stylesheet" href="/users/assets/css/nice-select.css">
+        <link rel="stylesheet" href="/users/assets/css/slick.css">
+        <link rel="stylesheet" href="/users/assets/css/main.css">
+    </head>
+    <body>
+        <!-- header-area start -->
+        <%- include('header'); -%>
+        <!-- header-area end -->
+    
+        <!-- slide-bar start -->
+        <%- include('sidebar'); -%>
+        <!-- slide-bar end -->
+    
+        <main>
+<div class="donar-information donation-form grey-bg2 mb-30 wow fadeInUp2 animated" data-wow-delay='.1s'>
+    <div class="section-title text-left mb-50">
+        <h4><i class="fas fa-link"></i> Log In</h4>
+    </div>
+    <form method="post" id="login" action="login_process">
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label>Moblie No:</label>
+                    <input id="phone" name="user_mobile" type="text" class="form-control required digit"  placeholder="Your registered number" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="input-area mb-10">
+                    <label>Password: </label>
+                    <input type="password" id="pwd" name="user_password" class="form-control"  placeholder="Your Password" required>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6">
+            <button type="submit" class="theme_btn theme_btn_bg_02">Log In</button>
+        </div>
+        <div class="col-xl-6">
+         <br> <a href="/users/forgot_pwd">Forgot Password?</a> &ensp; <!-- <a href="/chng_pass">Change Password</a> -->
+        </div>
+    </div>
+    </form>
+</div>
+
+<%- include('footer'); -%>
+<script src="/users/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="/users/assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="/users/assets/js/popper.min.js"></script>
+<script src="/users/assets/js/bootstrap.min.js"></script>
+<script src="/users/assets/js/owl.carousel.min.js"></script>
+<script src="/users/assets/js/isotope.pkgd.min.js"></script>
+<script src="/users/assets/js/slick.min.js"></script>
+<script src="/users/assets/js/jquery.meanmenu.min.js"></script>
+<script src="/users/assets/js/metisMenu.min.js"></script>
+<script src="/users/assets/js/jquery.nice-select.js"></script>
+<script src="/users/assets/js/ajax-form.js"></script>
+<script src="/users/assets/js/wow.min.js"></script>
+<script src="/users/assets/js/jquery.counterup.min.js"></script>
+<script src="/users/assets/js/waypoints.min.js"></script>
+<script src="/users/assets/js/jquery.scrollUp.min.js"></script>
+<script src="/users/assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="/users/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="/users/assets/js/jquery.easypiechart.js"></script>
+<script src="/users/assets/js/tilt.jquery.js"></script>
+<script src="/users/assets/js/parallax.min.js"></script>
+<script src="/users/assets/js/plugins.js"></script>
+<script src="/users/assets/js/main.js"></script>
+
+<!-- Jquery Validatio Code Start -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js"></script>
+<!--jQuery Validation-->
+<script>
+    jQuery.validator.addMethod("accept", function(value, element, param) {
+        return value.match(new RegExp("^" + param + "$"));
+    });
+
+    $.validator.addMethod("pwcheck", function(value) {
+           return /^[A-Za-z0-9\d=!\-@._*]*$/.test(value) // consists of only these
+           && /[a-z]/.test(value) // has a lowercase letter
+        && /[A-Z]/.test(value) // has a uppercase letter
+           && /\d/.test(value) // has a digit
+        && /\W/.test(value) // has a special character
+    });
+
+    $("#login").validate({
+        rules: { 
+            phone: {
+                required: true,
+                digits: true
+                },
+            pwd: {
+                required: true  
+                }
+            },
+            messages: {
+                phone: {
+                required: "This field is required.",
+                digits: "This field must only consists numbers."
+            },
+            pwd: {
+                required: "This field is required."
+            }
+        }
+    });
+</script>
+<style>
+    .error{
+        color:red;
+        }
+</style>
+</body>
+</html>

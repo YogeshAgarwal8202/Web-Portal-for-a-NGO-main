@@ -1,0 +1,88 @@
+<header id="top-menu">
+    <div class="header-top-area pos-rel pt-10 pb-15 d-none d-lg-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <% for(var i=0; i<ngo_info.length; i++) { %>
+                <div class="col-xl-6 col-lg-7">
+                    <div class="top-cta">
+                        <span><i class="far fa-phone"><b>Call</b> : <a href="tel:<%= ngo_info[0].ngo_mobile1 %>"> <%= ngo_info[0].ngo_mobile1 %> </a> ; <a href="tel:<%= ngo_info[0].ngo_mobile2 %>"> <%= ngo_info[0].ngo_mobile2 %> </a></i></span> &ensp;
+                        <span><i class="far fa-envelope"><b> Email</b> : <a href="mailto:<%= ngo_info[0].ngo_email %>"><%= ngo_info[0].ngo_email %></a> </i></span>
+                    </div>
+                </div>
+                <% } %>
+                <div class="col-xl-6 col-lg-5 d-flex align-items-center justify-content-end">
+                <% if(locals.user_id) { %>
+                    <div class="top-right-nav">
+                        Hi , <%= locals.user_name %>
+                        <a href="/users/logout">/ Logout</a>
+                    </div>
+                <% }else{ %>
+                    <div class="top-right-nav">
+                        <a href="/users/signup"><i class="far fa-user-circle"></i> SingUp</a>
+                        <a href="/users/login">/ LogIn</a>
+                    </div>
+                <% } %>
+                    <div class="header-social">
+                            <a href="https://www.facebook.com/suryabala.charity/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/SevaSuryabala"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/channel/UCKMWYVG4os3wj8MXnzXW5EA"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-header-area">
+        <div class="container">
+            
+            <div class="row align-items-center justify-content-between">
+                <div class="col-xl-1 col-lg-2 col-md-4 col-4">
+                    <div class="logo">
+                        <a class="logo-img" href="/users/"><img src="/users/assets/img/logo/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <b style="font-size: medium; color: black;">Suryabala Seva Sansthan</b>
+                <div class="col-xl-6 col-lg-4 d-none d-lg-block text-lg-center text-xl-right"> 
+                    <div class="main-menu d-none d-lg-block">
+                        <nav>
+                            <ul>
+                                <li><a href="/users/">Home</a></li>
+                                <li><a href="/users/about">About</a></li>
+                                <li><a href="/users/events">Events</a></li> <!-- Link in Events <li><a href="events-details.html">Events Details</a></li> -->
+                                <li><a href="/users/gallery">Gallery</a></li>               
+                                <li><a href="#">Other</a> <i class="far fa-chevron-down"></i>
+                                    <ul class="submenu">
+                                        <li><a href="/users/team">Team</a></li>
+                                        <li><a href="/users/faq">FAQ</a></li>
+                                        <li><a href="/users/contact">Contact</a></li>
+                                    </ul>
+                                </li>
+                                <% if(locals.user_id) { %>
+                                <li><a href="#">My Account</a> <i class="far fa-chevron-down"></i>
+                                    <ul class="submenu">
+                                        <li><a href="/users/profile_details">My Profile</a></li>
+                                        <li><a href="/users/history">My History</a></li>
+                                        <li><a href="/users/chng_pass">Change Password</a></li>
+                                        <% if(locals.type_id == 1) { %>
+                                            <li><a href="/admin_home">Visit as Administrator</a></li>  
+                                        <% } %>
+                                    </ul>
+                                </li>
+                                <% } %>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-6 text-right">
+                    <div class="hamburger-menu d-md-block d-lg-none">
+                        <a href="javascript:void(0);">
+                            <i class="far fa-bars"></i>
+                        </a>
+                    </div>
+                    <div class="quote-btn d-none d-lg-block">
+                        <a href="/users/donation" class="theme_btn theme_btn_bg">Donate Now <span><i class="fas fa-rupee-sign"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
